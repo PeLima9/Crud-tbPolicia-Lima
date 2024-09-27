@@ -42,7 +42,7 @@ public class Policia {
         return Peso_Policia;
     }
 
-    public void setPeso_Policia(int Peso_Policia) {
+    public void setPeso_Policia(double Peso_Policia) {
         this.Peso_Policia = Peso_Policia;
     }
 

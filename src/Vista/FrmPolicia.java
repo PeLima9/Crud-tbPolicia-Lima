@@ -29,8 +29,6 @@ public class FrmPolicia extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jpHeader = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jtbPolicia = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -43,6 +41,8 @@ public class FrmPolicia extends javax.swing.JFrame {
         btnAdd = new javax.swing.JButton();
         btnClear = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtbPolicia = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,11 +74,79 @@ public class FrmPolicia extends javax.swing.JFrame {
 
         jPanel1.add(jpHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 70));
 
-        jtbPolicia.setBackground(new java.awt.Color(47, 102, 144));
+        jLabel2.setFont(new java.awt.Font("Montserrat Black", 1, 20)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(217, 220, 214));
+        jLabel2.setText("Correo:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 100, 30));
 
-        jTable2.setBackground(new java.awt.Color(58, 124, 165));
-        jTable2.setForeground(new java.awt.Color(217, 220, 214));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        jLabel3.setFont(new java.awt.Font("Montserrat Black", 1, 20)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(217, 220, 214));
+        jLabel3.setText("Nombre:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 100, 30));
+
+        jLabel4.setFont(new java.awt.Font("Montserrat Black", 1, 20)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(217, 220, 214));
+        jLabel4.setText("Edad:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 100, 30));
+
+        jLabel5.setFont(new java.awt.Font("Montserrat Black", 1, 20)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(217, 220, 214));
+        jLabel5.setText("Peso:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 100, 30));
+
+        txtCorreo.setBackground(new java.awt.Color(22, 66, 91));
+        txtCorreo.setFont(new java.awt.Font("Montserrat Black", 0, 16)); // NOI18N
+        txtCorreo.setForeground(new java.awt.Color(217, 220, 214));
+        txtCorreo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
+        jPanel1.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 270, 40));
+
+        txtNombre.setBackground(new java.awt.Color(22, 66, 91));
+        txtNombre.setFont(new java.awt.Font("Montserrat Black", 0, 16)); // NOI18N
+        txtNombre.setForeground(new java.awt.Color(217, 220, 214));
+        txtNombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 270, 40));
+
+        txtEdad.setBackground(new java.awt.Color(22, 66, 91));
+        txtEdad.setFont(new java.awt.Font("Montserrat Black", 0, 16)); // NOI18N
+        txtEdad.setForeground(new java.awt.Color(217, 220, 214));
+        txtEdad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
+        jPanel1.add(txtEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 270, 40));
+
+        txtPeso.setBackground(new java.awt.Color(22, 66, 91));
+        txtPeso.setFont(new java.awt.Font("Montserrat Black", 0, 16)); // NOI18N
+        txtPeso.setForeground(new java.awt.Color(217, 220, 214));
+        txtPeso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
+        jPanel1.add(txtPeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 270, 40));
+
+        btnUpdate.setBackground(new java.awt.Color(22, 66, 91));
+        btnUpdate.setFont(new java.awt.Font("Montserrat Black", 1, 18)); // NOI18N
+        btnUpdate.setForeground(new java.awt.Color(129, 195, 215));
+        btnUpdate.setText("Editar");
+        btnUpdate.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
+        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 180, 40));
+
+        btnAdd.setBackground(new java.awt.Color(22, 66, 91));
+        btnAdd.setFont(new java.awt.Font("Montserrat Black", 1, 18)); // NOI18N
+        btnAdd.setForeground(new java.awt.Color(129, 195, 215));
+        btnAdd.setText("Guardar");
+        btnAdd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
+        jPanel1.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 180, 40));
+
+        btnClear.setBackground(new java.awt.Color(22, 66, 91));
+        btnClear.setFont(new java.awt.Font("Montserrat Black", 1, 18)); // NOI18N
+        btnClear.setForeground(new java.awt.Color(129, 195, 215));
+        btnClear.setText("Limpiar Campos");
+        btnClear.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
+        jPanel1.add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 180, 40));
+
+        btnDelete.setBackground(new java.awt.Color(22, 66, 91));
+        btnDelete.setFont(new java.awt.Font("Montserrat Black", 1, 18)); // NOI18N
+        btnDelete.setForeground(new java.awt.Color(129, 195, 215));
+        btnDelete.setText("Eliminar");
+        btnDelete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
+        jPanel1.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 180, 40));
+
+        jtbPolicia.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -89,81 +157,9 @@ public class FrmPolicia extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jtbPolicia.setViewportView(jTable2);
+        jScrollPane1.setViewportView(jtbPolicia);
 
-        jPanel1.add(jtbPolicia, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 540, 390));
-
-        jLabel2.setFont(new java.awt.Font("Montserrat Black", 1, 20)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(217, 220, 214));
-        jLabel2.setText("Correo:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 100, 30));
-
-        jLabel3.setFont(new java.awt.Font("Montserrat Black", 1, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(217, 220, 214));
-        jLabel3.setText("Nombre:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 100, 30));
-
-        jLabel4.setFont(new java.awt.Font("Montserrat Black", 1, 20)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(217, 220, 214));
-        jLabel4.setText("Edad:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 100, 30));
-
-        jLabel5.setFont(new java.awt.Font("Montserrat Black", 1, 20)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(217, 220, 214));
-        jLabel5.setText("Peso:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 100, 30));
-
-        txtCorreo.setBackground(new java.awt.Color(22, 66, 91));
-        txtCorreo.setFont(new java.awt.Font("Montserrat Black", 0, 16)); // NOI18N
-        txtCorreo.setForeground(new java.awt.Color(217, 220, 214));
-        txtCorreo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
-        jPanel1.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 270, 40));
-
-        txtNombre.setBackground(new java.awt.Color(22, 66, 91));
-        txtNombre.setFont(new java.awt.Font("Montserrat Black", 0, 16)); // NOI18N
-        txtNombre.setForeground(new java.awt.Color(217, 220, 214));
-        txtNombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
-        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 270, 40));
-
-        txtEdad.setBackground(new java.awt.Color(22, 66, 91));
-        txtEdad.setFont(new java.awt.Font("Montserrat Black", 0, 16)); // NOI18N
-        txtEdad.setForeground(new java.awt.Color(217, 220, 214));
-        txtEdad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
-        jPanel1.add(txtEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 270, 40));
-
-        txtPeso.setBackground(new java.awt.Color(22, 66, 91));
-        txtPeso.setFont(new java.awt.Font("Montserrat Black", 0, 16)); // NOI18N
-        txtPeso.setForeground(new java.awt.Color(217, 220, 214));
-        txtPeso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
-        jPanel1.add(txtPeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 270, 40));
-
-        btnUpdate.setBackground(new java.awt.Color(22, 66, 91));
-        btnUpdate.setFont(new java.awt.Font("Montserrat Black", 1, 18)); // NOI18N
-        btnUpdate.setForeground(new java.awt.Color(129, 195, 215));
-        btnUpdate.setText("Editar");
-        btnUpdate.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
-        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, 180, 40));
-
-        btnAdd.setBackground(new java.awt.Color(22, 66, 91));
-        btnAdd.setFont(new java.awt.Font("Montserrat Black", 1, 18)); // NOI18N
-        btnAdd.setForeground(new java.awt.Color(129, 195, 215));
-        btnAdd.setText("Guardar");
-        btnAdd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
-        jPanel1.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 180, 40));
-
-        btnClear.setBackground(new java.awt.Color(22, 66, 91));
-        btnClear.setFont(new java.awt.Font("Montserrat Black", 1, 18)); // NOI18N
-        btnClear.setForeground(new java.awt.Color(129, 195, 215));
-        btnClear.setText("Limpiar Campos");
-        btnClear.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
-        jPanel1.add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 430, 180, 40));
-
-        btnDelete.setBackground(new java.awt.Color(22, 66, 91));
-        btnDelete.setFont(new java.awt.Font("Montserrat Black", 1, 18)); // NOI18N
-        btnDelete.setForeground(new java.awt.Color(129, 195, 215));
-        btnDelete.setText("Eliminar");
-        btnDelete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
-        jPanel1.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 180, 40));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 540, 390));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -215,19 +211,19 @@ public class FrmPolicia extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAdd;
-    private javax.swing.JButton btnClear;
-    private javax.swing.JButton btnDelete;
-    private javax.swing.JButton btnUpdate;
+    public javax.swing.JButton btnAdd;
+    public javax.swing.JButton btnClear;
+    public javax.swing.JButton btnDelete;
+    public javax.swing.JButton btnUpdate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTable jTable2;
+    public javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel jpHeader;
-    private javax.swing.JScrollPane jtbPolicia;
+    public javax.swing.JTable jtbPolicia;
     public javax.swing.JTextField txtCorreo;
     public javax.swing.JTextField txtEdad;
     public javax.swing.JTextField txtNombre;

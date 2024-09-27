@@ -73,45 +73,53 @@ public class FrmPolicia extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Montserrat Black", 1, 20)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(217, 220, 214));
         jLabel2.setText("Correo:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 100, 30));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 100, 30));
 
         jLabel3.setFont(new java.awt.Font("Montserrat Black", 1, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(217, 220, 214));
         jLabel3.setText("Nombre:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 100, 30));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 100, 30));
 
         jLabel4.setFont(new java.awt.Font("Montserrat Black", 1, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(217, 220, 214));
         jLabel4.setText("Edad:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 100, 30));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 100, 30));
 
         jLabel5.setFont(new java.awt.Font("Montserrat Black", 1, 20)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(217, 220, 214));
-        jLabel5.setText("Peso:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 100, 30));
+        jLabel5.setText("Peso(KG):");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, 30));
 
         txtCorreo.setBackground(new java.awt.Color(22, 66, 91));
         txtCorreo.setFont(new java.awt.Font("Montserrat Black", 0, 16)); // NOI18N
         txtCorreo.setForeground(new java.awt.Color(217, 220, 214));
         txtCorreo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
+        txtCorreo.setCaretColor(new java.awt.Color(217, 220, 214));
+        txtCorreo.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanel1.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 270, 40));
 
         txtNombre.setBackground(new java.awt.Color(22, 66, 91));
         txtNombre.setFont(new java.awt.Font("Montserrat Black", 0, 16)); // NOI18N
         txtNombre.setForeground(new java.awt.Color(217, 220, 214));
         txtNombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
+        txtNombre.setCaretColor(new java.awt.Color(217, 220, 214));
+        txtNombre.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 270, 40));
 
         txtEdad.setBackground(new java.awt.Color(22, 66, 91));
         txtEdad.setFont(new java.awt.Font("Montserrat Black", 0, 16)); // NOI18N
         txtEdad.setForeground(new java.awt.Color(217, 220, 214));
         txtEdad.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
+        txtEdad.setCaretColor(new java.awt.Color(217, 220, 214));
+        txtEdad.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanel1.add(txtEdad, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 270, 40));
 
         txtPeso.setBackground(new java.awt.Color(22, 66, 91));
         txtPeso.setFont(new java.awt.Font("Montserrat Black", 0, 16)); // NOI18N
         txtPeso.setForeground(new java.awt.Color(217, 220, 214));
         txtPeso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(129, 195, 215)));
+        txtPeso.setCaretColor(new java.awt.Color(217, 220, 214));
+        txtPeso.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanel1.add(txtPeso, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 270, 40));
 
         btnUpdate.setBackground(new java.awt.Color(22, 66, 91));

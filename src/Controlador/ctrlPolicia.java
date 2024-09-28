@@ -35,7 +35,6 @@ public class ctrlPolicia implements ActionListener, MouseListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        
         //Boton Agregar
         if (e.getSource() == Vista.btnAdd){
             
@@ -76,7 +75,6 @@ public class ctrlPolicia implements ActionListener, MouseListener{
         
         //Boton Editar
         if (e.getSource() == Vista.btnUpdate){
-            
             //Validación de Datos
             if (Vista.txtNombre.getText().isEmpty() || Vista.txtEdad.getText().isEmpty() || Vista.txtPeso.getText().isEmpty() || Vista.txtCorreo.getText().isEmpty()){
                 //Mostrar JOptionPane
@@ -144,6 +142,15 @@ public class ctrlPolicia implements ActionListener, MouseListener{
                     Vista.txtPeso.setText(null);
                     Vista.txtCorreo.setText(null);
                 }
+        }
+        
+        //Boton Limpiar
+        if (e.getSource() == Vista.btnClear){
+            //Limpiar Campos
+            Vista.txtNombre.setText(null);
+            Vista.txtEdad.setText(null);
+            Vista.txtPeso.setText(null);
+            Vista.txtCorreo.setText(null);
         }
     }
 

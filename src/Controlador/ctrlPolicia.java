@@ -35,6 +35,7 @@ public class ctrlPolicia implements ActionListener, MouseListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
+        
         //Boton Agregar
         if (e.getSource() == Vista.btnAdd){
             
@@ -53,7 +54,7 @@ public class ctrlPolicia implements ActionListener, MouseListener{
                 Modelo.setEdad_Policia(edad);
                 
                 //Convertir Peso a Double
-                String pesoTexto = Vista.txtEdad.getText().trim();
+                String pesoTexto = Vista.txtPeso.getText().trim();
                 double peso = Double.parseDouble(pesoTexto);
                 Modelo.setPeso_Policia(peso);
 
@@ -74,7 +75,6 @@ public class ctrlPolicia implements ActionListener, MouseListener{
         }
         
         //Boton Editar
-        //Boton Agregar
         if (e.getSource() == Vista.btnUpdate){
             
             //Validación de Datos
@@ -119,6 +119,31 @@ public class ctrlPolicia implements ActionListener, MouseListener{
                     Vista.txtCorreo.setText(null);
                 }
             }
+        }
+        
+        //Boton Eliminar
+        if (e.getSource() == Vista.btnDelete){
+                //Mostrar JOptionPanel con botones
+                String[] buttons = {"Cancelar", "Continuar"};
+                int confirm = JOptionPane.showOptionDialog(Vista, "Está seguro que desea eliminar este registro?", "Eliminar", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, null, buttons, buttons[0]);
+                
+                if (confirm == 0){
+                    //No hace nada
+                }
+                else if (confirm == 1){
+                    
+                    //Eliminar Datos
+                    Modelo.DeletePolicia(Vista.jtbPolicia);
+                    
+                    //Select
+                    Modelo.SelectPolicia(Vista.jtbPolicia);
+                    
+                    //Limpiar Campos
+                    Vista.txtNombre.setText(null);
+                    Vista.txtEdad.setText(null);
+                    Vista.txtPeso.setText(null);
+                    Vista.txtCorreo.setText(null);
+                }
         }
     }
 

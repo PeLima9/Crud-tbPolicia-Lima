@@ -183,7 +183,7 @@ public class Policia {
         //Preparar Query
         try{
             //SQL Query
-            PreparedStatement deletePolicia = connection.prepareStatement("DELETE FROM Empleados WHERE UUID_Policia = ?");
+            PreparedStatement deletePolicia = connection.prepareStatement("DELETE FROM tbPolicia WHERE UUID_Policia = ?");
             
             //Asignar Valores
             deletePolicia.setString(1, UUID);
